@@ -1,4 +1,25 @@
+@font-face {
+   font-family: Roboto;
+   src: url(./assets/fonts/Roboto.ttf);
+}
+
+@media print {
+   body * {
+      visibility: hidden;
+   }
+   #main-cv,
+   #main-cv * {
+      visibility: visible;
+   }
+   #main-cv {
+      position: absolute;
+      left: 0;
+      top: 0;
+   }
+}
+
 body {
+   font-family: Roboto;
    margin: 0;
 }
 .header-div {
@@ -6,4 +27,181 @@ body {
    padding: 5px;
    display: flex;
    justify-content: center;
+}
+.page-header {
+   padding: 5px 50px;
+   display: flex;
+   justify-content: space-between;
+}
+.page-header > span {
+   font-size: 22px;
+   font-weight: 600;
+}
+#edit-page {
+   padding: 20px 70px;
+}
+#inputs-container {
+   height: 1000px;
+   overflow-y: scroll;
+   scrollbar-width: none;
+   background-color: rgb(124, 124, 124);
+   border-radius: 15px;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.edit-info-container {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.edit-info-container span {
+   font-weight: 600;
+   font-size: 18px;
+}
+
+.edit-info-container input,
+.edit-info-container textarea {
+   background-color: rgb(224, 224, 224);
+   border: 0px;
+   border-radius: 5px;
+   padding: 3px 5px;
+}
+
+.delete-btn {
+   background-color: rgb(248, 49, 49);
+   border: 0px;
+   width: 70px;
+   border-radius: 5px;
+   color: white;
+   font-size: 16px;
+}
+.add-btn {
+   background-color: rgb(64, 179, 245);
+   border: 0px;
+   width: 70px;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+#preview-page {
+   padding: 20px 70px;
+}
+#main-cv {
+   border: 1px solid black;
+   height: 1000px;
+}
+#cv-header {
+   background-color: rgb(160, 248, 160);
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+#cv-header span:nth-child(1) {
+   font-size: 32px;
+   font-weight: 500;
+}
+#cv-info {
+   padding: 20px;
+   display: grid;
+   grid-template-columns: 5fr 2fr;
+}
+#cv-info-left {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+#cv-info-left > div {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+#cv-info-left > div > span {
+   font-size: 22px;
+   display: block;
+   margin-right: 50px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid black;
+}
+.exp-div {
+   display: flex;
+   gap: 50px;
+}
+.exp-div > span {
+   font-weight: 700;
+}
+.exp-div > div {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.exp-div > div > span:nth-child(1) {
+   font-size: 20px;
+}
+.exp-div > div > span:nth-child(2) {
+   font-size: 16px;
+}
+
+.edu-div {
+   display: flex;
+   gap: 50px;
+}
+.edu-div > span {
+   font-weight: 700;
+}
+.edu-div > div {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.edu-div > div > span:nth-child(1) {
+   font-size: 20px;
+}
+.edu-div > div > span {
+   font-size: 16px;
+}
+
+#cv-info-right {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+#profile-pic-div {
+   background-color: rgba(255, 0, 0, 0);
+   width: 140px;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#profile-pic-div > img {
+   max-width: 140px;
+   max-height: 150px;
+}
+
+#personal-info {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+#personal-info > p {
+   font-size: 16px;
+   width: 180px;
+   word-wrap: break-word;
+}
+#personal-info > span:nth-child(1) {
+   font-size: 22px;
+   display: block;
+   border-bottom: 1px solid black;
+   padding-bottom: 5px;
+   font-weight: 400;
+}
+#personal-info > span {
+   font-size: 20px;
+   font-weight: 600;
 }
